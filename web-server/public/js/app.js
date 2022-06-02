@@ -4,6 +4,7 @@ const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
+const image = document.querySelector('#weather-img');
 // https://sable-weather-application.herokuapp.com/
 
 weatherForm.addEventListener('submit', (e) => {
@@ -16,6 +17,7 @@ weatherForm.addEventListener('submit', (e) => {
             } else {
                 messageOne.textContent = data.location;
                 messageTwo.textContent = data.forecast;
+                image.src = data.imageUrl;
             }
         })
     })
